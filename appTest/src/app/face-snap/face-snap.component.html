@@ -3,5 +3,7 @@
   <p>Mis en ligne le {{ createdAt }}</p>
   <img [src]="imgUrl" [alt]="title">
   <p>{{ description }}</p>
-  <p>:) {{ snaps }}</p>
+  <p>
+    <button (click)="onToggleLike()">{{ buttonText }}</button>
+    :) {{ snaps }}</p>
 </div>
