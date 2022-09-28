@@ -33,7 +33,7 @@ export class AppComponent implements OnInit{
         imgUrl: 'https://cdn.pixabay.com/photo/2015/05/31/16/03/teddy-bear-792273_1280.jpg',
         createdAt: new Date(),
         snaps: 140,
-        location: 'Toulouse'
+        location: ''
       }
     ];
   }

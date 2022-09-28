@@ -1,6 +1,10 @@
 <div class="face-snap-card" [ngClass]="{ snapped: buttonText === 'Unlike!'}">
-  <h2>{{ faceSnap.title }}</h2>
-  <p>Mis en ligne le {{ faceSnap.createdAt }}</p>
+  <h2>{{ faceSnap.title | uppercase }}</h2>
+  <p>{{ 4896542.58 | number: '1.0-0' }}</p>
+  <p>{{ 122422.467 | number }} </p>
+  <p>{{ 0.463 | percent: '1.0-0' }}</p>
+  <p>{{ 364.50 | currency: 'EUR' : 'symbol' }}</p>
+  <p>Mis en ligne le {{ faceSnap.createdAt | date: 'dd MMMM YYYY à HH:mm'}}</p>
   <img [src]="faceSnap.imgUrl" [alt]="faceSnap.title">
   <p>{{ faceSnap.description }}</p>
   <p *ngIf="faceSnap.location">Photo prise à {{ faceSnap.location }}</p>
