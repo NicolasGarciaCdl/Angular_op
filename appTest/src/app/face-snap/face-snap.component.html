@@ -1,4 +1,4 @@
-<div class="face-snap-card">
+<div class="face-snap-card" [ngClass]="{ snapped: buttonText === 'Unlike!'}">
   <h2>{{ faceSnap.title }}</h2>
   <p>Mis en ligne le {{ faceSnap.createdAt }}</p>
   <img [src]="faceSnap.imgUrl" [alt]="faceSnap.title">
@@ -6,5 +6,6 @@
   <p *ngIf="faceSnap.location">Photo prise à {{ faceSnap.location }}</p>
   <p>
     <button (click)="onToggleLike()">{{ buttonText }}</button>
-    {{ faceSnap.snaps }}</p>
+    <span [ngStyle]="{ color: 'rgb(0,'+ faceSnap.snaps +', 0)'}">{{ faceSnap.snaps }}</span>
+  </p>
 </div>

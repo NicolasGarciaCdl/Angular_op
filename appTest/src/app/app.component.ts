@@ -24,7 +24,7 @@ export class AppComponent implements OnInit{
         description: 'une autre jolie description pour la peluche Ours',
         imgUrl: 'https://cdn.pixabay.com/photo/2015/05/31/16/03/teddy-bear-792273_1280.jpg',
         createdAt: new Date(),
-        snaps: 6,
+        snaps: 60,
         location: 'Bordeaux'
       },
       {
@@ -32,7 +32,7 @@ export class AppComponent implements OnInit{
         description: 'jolie description de l\'ours ted',
         imgUrl: 'https://cdn.pixabay.com/photo/2015/05/31/16/03/teddy-bear-792273_1280.jpg',
         createdAt: new Date(),
-        snaps: 4,
+        snaps: 140,
         location: 'Toulouse'
       }
     ];
