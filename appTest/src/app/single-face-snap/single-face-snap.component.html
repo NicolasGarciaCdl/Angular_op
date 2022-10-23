@@ -1,4 +1,4 @@
-<div class="face-snap-card" [ngClass]="{ snapped: buttonText === 'Unlike!'}">
+<div class="face-snap-card" *ngIf="faceSnaps$ | async as faceSnap" [ngClass]="{ snapped: buttonText === 'Unlike!'}">
   <h2>{{ faceSnap.title | uppercase }}</h2>
   <a routerLink="/facesnaps">Retour</a>
   <p>Mis en ligne le {{ faceSnap.createdAt | date: 'dd MMMM YYYY à HH:mm'}}</p>
@@ -6,7 +6,7 @@
   <p>{{ faceSnap.description }}</p>
   <p *ngIf="faceSnap.location">Photo prise à {{ faceSnap.location }}</p>
   <p>
-    <button (click)="onToggleLike()">{{ buttonText }}</button>
+    <button (click)="onToggleLike(faceSnap.id)">{{ buttonText }}</button>
     <span [ngStyle]="{ color: 'rgb(0,'+ faceSnap.snaps +', 0)'}">{{ faceSnap.snaps }}</span>
   </p>
 </div>

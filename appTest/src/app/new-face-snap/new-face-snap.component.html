@@ -1,0 +1,31 @@
+<div class="form-card">
+  <h2>NOUVEAU SNAP</h2>
+  <form [formGroup]="snapForm">
+    <div class="form-group">
+      <label for="title">Titre</label>
+      <input type="text" formControlName="title" id="title">
+    </div>
+    <div class="form-group">
+      <label for="description">Description</label>
+      <textarea formControlName="description" id="description" rows="4"></textarea>
+    </div>
+    <div class="form-group">
+      <label for="imgUrl">URL de l'image</label>
+      <input type="text" formControlName="imgUrl" id="imgUrl">
+    </div>
+    <div class="form-group">
+      <label for="location">Lieu</label>
+      <input type="text" formControlName="location" id="location">
+    </div>
+    <div class="action-buttons">
+      <button type="submit" (click)="onSubmitForm()" [disabled]="snapForm.invalid">Enregistrer</button>
+    </div>
+  </form>
+</div>
+<div *ngIf="snapFormPreview$ | async as faceSnap" class="face-snap-card">
+  <h2>{{ faceSnap.title }}</h2>
+  <p>Mis en ligne {{ faceSnap.createdAt | date: 'à HH:mm, le d MMMM yyyy' }}</p>
+  <img [src]="faceSnap.imgUrl" [alt]="faceSnap.title">
+  <p>{{ faceSnap.description }}</p>
+  <p *ngIf="faceSnap.location">Photo prise à {{ faceSnap.location }}</p>
+</div>
