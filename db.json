@@ -51,6 +51,24 @@
       "imageUrl": "https://wtop.com/wp-content/uploads/2020/06/HEALTHYFRESH.jpg",
       "createdDate": "new Date()",
       "snaps": 101
+    },
+    {
+      "id": 7,
+      "snaps": 0,
+      "createdAt": "2022-10-23T14:45:38.433Z",
+      "title": "new FaceSnap htpp",
+      "description": "it's incredible",
+      "imgUrl": "https://www.techcoil.com/blog/wp-content/uploads/Java-logo.gif?resize=350%2C200&ssl=1",
+      "location": null
+    },
+    {
+      "id": 8,
+      "snaps": 0,
+      "createdAt": "2022-10-23T14:46:54.748Z",
+      "title": "new FaceSnap htpp",
+      "description": "it's incredible",
+      "imgUrl": "https://www.techcoil.com/blog/wp-content/uploads/Java-logo.gif?resize=350%2C200&ssl=1",
+      "location": null
     }
   ]
 }
